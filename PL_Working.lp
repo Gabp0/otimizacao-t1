@@ -1,0 +1,56 @@
+min: 0.005x1 + 0.005z1 + 0.2t1 + 0.005x2 + 0.005z2 + 0.2t2 + 0.005x3 + 0.005z3 + 0.2t3;
+
+/* restricoes para a retirada do modulo */
+x1 - z1 = 500 - h1;
+x2 - z2 = 800 - h2;
+x3 - z3 = 200 - h3;
+
+/* volume do mes atual */
+v1 = 500 + 500;
+v2 = v1 + 800 - h1;
+v3 = v2 + 200 - h2;
+
+/* restricoes para o volume minimo e maximo da hidroeletrica */
+v1 - h1 <= 1000;
+v2 - h2 <= 1000;
+v3 - h3 <= 1000;
+
+v1 - h1 >= 200;
+v2 - h2 >= 200;
+v3 - h3 >= 200;
+
+/* restricoes para o consumo maximo de agua */
+h1 <= v1;
+h2 <= v2;
+h3 <= v3;
+
+/* demanda minima de energia */
+1.1h1 + t1 >= 900;
+1.1h2 + t2 >= 1000;
+1.1h3 + t3 >= 950;
+
+/* geracao maxima da termoeletrica */
+t1 <= 1000;
+t2 <= 1000;
+t3 <= 1000;
+
+/* restricoes de nao negativade */
+x1 >= 0;
+x2 >= 0;
+x3 >= 0;
+z1 >= 0;
+z2 >= 0;
+z3 >= 0;
+h1 >= 0;
+h2 >= 0;
+h3 >= 0;
+t1 >= 0;
+t2 >= 0;
+t3 >= 0;
+
+Consumo_agua_mes_1 = h1;
+Consumo_agua_mes_2 = h2;
+Consumo_agua_mes_3 = h3;
+Geracao_termoeletrica_mes_1 = t1;
+Geracao_termoeletrica_mes_2 = t2;
+Geracao_termoeletrica_mes_3 = t3;
