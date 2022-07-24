@@ -1,7 +1,7 @@
-PWD /home/gab/Documentos/ufpr/2022-1/otimizacao/trabalho1/artigo
+PWD /home/gab/Documentos/ufpr/2022-1/otimizacao/otimizacao-t1/artigo
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/gab/Documentos/ufpr/2022-1/otimizacao/trabalho1/artigo/artigo.tex
+INPUT /home/gab/Documentos/ufpr/2022-1/otimizacao/otimizacao-t1/artigo/artigo.tex
 OUTPUT artigo.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
