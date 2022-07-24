@@ -7,17 +7,17 @@ import java.util.Vector;
 class Programa {
 
     public static void main(String[] args) throws Exception {
-        System.out.println(createPL());
+        System.out.println(createPL(args[0]));
     }
 
-    static String createPL() throws Exception {
+    static String createPL(String input) throws Exception {
         int n = 0;
         double vmin = 0, vmax = 0, vini = 0, k = 0, tmax = 0, ct = 0, ca = 0;
         Vector<Double> d = new Vector<Double>();
         Vector<Double> y = new Vector<Double>();
         String pl = "min:";
 
-        File file = new File(System.getProperty("user.dir") + "\\input.txt");
+        File file = new File(System.getProperty("user.dir") + "\\" + input);
         Scanner s = new Scanner(file);
 
         n = s.nextInt();
