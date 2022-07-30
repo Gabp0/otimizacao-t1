@@ -1,10 +1,11 @@
-#include "pl.h"
+#include "lp.h"
 #include <iostream>
 #include <string>
 #include <fstream>
 using namespace std;
 
 LinearProgram::LinearProgram()
+// construtor para leitura da entrada padrao
 {
     cin >> this->month;
 
@@ -26,6 +27,7 @@ LinearProgram::LinearProgram()
 }
 
 LinearProgram::LinearProgram(string filename)
+// construtor para leitura do arquivo
 {
     fstream input_file(filename, ios_base::in);
 
@@ -48,7 +50,15 @@ LinearProgram::LinearProgram(string filename)
     input_file >> this->tmax >> this->ct >> this->ca;
 }
 
+LinearProgram::~LinearProgram()
+// desconstrutor
+{
+    this->afluencia.clear();
+    this->demandas.clear();
+}
+
 void LinearProgram::toFile(string filename)
+// escreve no arquivo de saida
 {
     ofstream output_file(filename, ios_base::out);
 

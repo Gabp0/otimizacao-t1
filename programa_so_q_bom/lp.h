@@ -21,7 +21,7 @@ private:
 public:
     LinearProgram(std::string filename);
     LinearProgram();
-    //~LinearProgram();
+    ~LinearProgram();
 
     void toFile(std::string filename);
 };
