@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/gab/Documentos/ufpr/2022-1/otimizacao/otimizacao-t1/programa_so_q_bom'
+g++    -c -o main.o main.cpp
+g++    -c -o lp.o lp.cpp
+gcc main.o lp.o -lstdc++ -o lp_gen
+make: Leaving directory '/home/gab/Documentos/ufpr/2022-1/otimizacao/otimizacao-t1/programa_so_q_bom'
+ 
