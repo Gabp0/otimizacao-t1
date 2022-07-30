@@ -31,60 +31,59 @@ Para um período de **3** meses; com as demandas de **900**, **1000** e **950**;
 
 A qual gera no arquivo de saída **lp_output.txt**:
 
-
-min: 0.005x1 + 0.005z1 + 0.2t1 + 0.005x2 + 0.005z2 + 0.2t2 + 0.005x3 + 0.005z3 + 0.2t3;
-
-/* restricoes para a retirada do modulo */
-x1 - z1 = 500 - h1;
-x2 - z2 = 800 - h2;
-x3 - z3 = 200 - h3;
-
-/* volume do mes atual */
-v1 = 500 + 500;
-v2 = v1 + 800 - h1;
-v3 = v2 + 200 - h2;
-
-/* restricoes para o volume minimo e maximo da hidroeletrica */
-v1 - h1 <= 1000;
-v2 - h2 <= 1000;
-v3 - h3 <= 1000;
-v1 - h1 >= 200;
-v2 - h2 >= 200;
-v3 - h3 >= 200;
-
-/* restricoes para o consumo maximo de agua */
-h1 <= v1;
-h2 <= v2;
-h3 <= v3;
-
-/* geracao maxima da termoeletrica */
-t1 <= 1000;
-t2 <= 1000;
-t3 <= 1000;
-
-/* demanda minima de energia */
-1.1h1 + t1 >= 900;
-1.1h2 + t2 >= 1000;
-1.1h3 + t3 >= 950;
-
-/* restricoes de nao negativade */
-x1 >= 0;
-z1 >= 0;
-h1 >= 0;
-t1 >= 0;
-x2 >= 0;
-z2 >= 0;
-h2 >= 0;
-t2 >= 0;
-x3 >= 0;
-z3 >= 0;
-h3 >= 0;
-t3 >= 0;
-
-
-Consumo_agua_mes_1 = h1;
-Geracao_termo_mes_1 = t1;
-Consumo_agua_mes_2 = h2;
-Geracao_termo_mes_2 = t2;
-Consumo_agua_mes_3 = h3;
-Geracao_termo_mes_3 = t3; 
+**min: 0.005x1 + 0.005z1 + 0.2t1 + 0.005x2 + 0.005z2 + 0.2t2 + 0.005x3 + 0.005z3 + 0.2t3;<br>
+<br>
+/* restricoes para a retirada do modulo */ <br>
+x1 - z1 = 500 - h1;<br>
+x2 - z2 = 800 - h2;<br>
+x3 - z3 = 200 - h3;<br>
+<br>
+/* volume do mes atual */<br>
+v1 = 500 + 500;<br>
+v2 = v1 + 800 - h1;<br>
+v3 = v2 + 200 - h2;<br>
+<br>
+/* restricoes para o volume minimo e maximo da hidroeletrica */<br>
+v1 - h1 <= 1000;<br>
+v2 - h2 <= 1000;<br>
+v3 - h3 <= 1000;<br>
+v1 - h1 >= 200;<br>
+v2 - h2 >= 200;<br>
+v3 - h3 >= 200;<br>
+<br>
+/* restricoes para o consumo maximo de agua */<br>
+h1 <= v1;<br>
+h2 <= v2;<br>
+h3 <= v3;<br>
+<br>
+/* geracao maxima da termoeletrica */<br>
+t1 <= 1000;<br>
+t2 <= 1000;<br>
+t3 <= 1000;<br>
+<br>
+/* demanda minima de energia */<br>
+1.1h1 + t1 >= 900;<br>
+1.1h2 + t2 >= 1000;<br>
+1.1h3 + t3 >= 950;<br>
+<br>
+/* restricoes de nao negativade */<br>
+x1 >= 0;<br>
+z1 >= 0;<br>
+h1 >= 0;<br>
+t1 >= 0;<br>
+x2 >= 0;<br>
+z2 >= 0;<br>
+h2 >= 0;<br>
+t2 >= 0;<br>
+x3 >= 0;<br>
+z3 >= 0;<br>
+h3 >= 0;<br>
+t3 >= 0;<br>
+<br>
+<br>
+Consumo_agua_mes_1 = h1;<br>
+Geracao_termo_mes_1 = t1;<br>
+Consumo_agua_mes_2 = h2;<br>
+Geracao_termo_mes_2 = t2;<br>
+Consumo_agua_mes_3 = h3;<br>
+Geracao_termo_mes_3 = t3; <br>**
